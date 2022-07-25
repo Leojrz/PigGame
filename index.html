@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pig Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="container__nav">
+        <div class="logo">
+          <img src="pig.png" alt="" />
+          <h5>Pig Game</h5>
+        </div>
+        <ul>
+          <li><button class="btn_rules">📕 How to play</button></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="box-container">
+      <button class="new_game">🔄New Game</button>
+      <div class="dice-img">
+        <img src="img/dice-1.png" alt="" class="dice" />
+      </div>
+      <button class="dice-btn">🎲Roll Dice</button>
+      <button class="hold">🕹Hold</button>
+      <div class="container-cards">
+        <div class="table_one player0">
+          <div class="content-card">
+            <h2 id="name_1">PLAYER 1</h2>
+            <h3 id="score0">0</h3>
+            <div class="current">
+              <h4>Current</h4>
+              <p id="current0">0</p>
+            </div>
+          </div>
+        </div>
+        <div class="table_two player1">
+          <h2 id="name_2">PLAYER 2</h2>
+          <h3 id="score1">0</h3>
+          <div class="current">
+            <h4>Current</h4>
+            <p id="current1">0</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="rules">
+      <div class="rules_container hidden">
+        <button class="btn_close">X</button>
+        <h2 class="rules_title">How to play the Pig Game</h2>
+        <div class="paragraph_rules">
+          <p>
+            Players take turns to roll a single dice as many times as they wish,
+            adding all roll results to a running total, but losing their gained
+            score for the turn if they roll a 1.
+          </p>
+          <p>
+            Each turn, a player repeatedly rolls a die until either a 1 is
+            rolled or the player decides to "hold":
+          </p>
+          <div class="cont_parag">
+            <span class="num_rule">1</span>
+            <p>
+              If the player rolls a 1, they score nothing and it becomes the
+              next player's turn.
+            </p>
+          </div>
+
+          <div class="cont_parag">
+            <span class="num_rule">2</span>
+            <p>
+              If the player rolls any other number, it is added to their turn
+              total and the player's turn continues.
+            </p>
+          </div>
+
+          <div class="cont_parag">
+            <span class="num_rule">3</span>
+            <p>
+              If a player chooses to "hold", their turn total is added to their
+              score, and it becomes the next player's turn.
+            </p>
+          </div>
+          <span class="win-parag">Winner:</span>
+          <p>The first player to score 100 or more points wins.</p>
+        </div>
+      </div>
+      <div class="overlay hidden"></div>
+    </section>
+  </body>
+</html>
